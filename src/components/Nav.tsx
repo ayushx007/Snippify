@@ -29,15 +29,22 @@ const Nav: React.FC = () => {
                                 alt='github'
                                 src='/Rectangle 27.svg'
                                 width={40}
-                                height={40} /><button onClick={() => signIn("github")} className={`${jura.className} text-white`}>Sign In</button>
+                                height={40}
+                                className='border border-black rounded-lg'
+                                />
+                                <button onClick={() => signIn("github")} className={`${jura.className} text-white border rounded-xl p-1 pl-2 pr-2 border-purple-700`}>Sign In</button>
                         </>
                     ) : (
                         <>
                             <Image
                                 alt='github'
                                 src={session.user?.image || ''}
-                                width={40}
-                                height={40} /><button onClick={() => signOut()} className={`${jura.className} text-white`}>Sign Out</button>
+                                width={35}
+                                height={35} 
+                                className='border border-black rounded-xl'
+                                />
+                                <button onClick={() => signOut()} className={`${jura.className} text-white border rounded-xl p-1 pl-2 pr-2 border-purple-700`}>Sign Out</button>
+                                
                         </>
                     )}
                 </div>
