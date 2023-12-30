@@ -26,6 +26,34 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.link {
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Initially no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: #ffffff; /* Color of the underline */
+  bottom: 0;
+  left: 0;
+  opacity: 0; /* Initially hidden */
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%; /* Full width on hover */
+  opacity: 1; /* Show the underline on hover */
+}
+
+
 
 .custom-class {
   height: 291px;
