@@ -3,20 +3,21 @@ import { motion, useAnimation } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import { Pacifico, Jura } from 'next/font/google';
 import Image from 'next/image';
+import CodeBlock from './CodeBlock';
 
 const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
 const jura = Jura({ weight: "400", subsets: ["latin"] });
 const imageVariants = {
     visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.4,
-        duration: 1.0
-      }
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.4,
+            duration: 1.0
+        }
     }),
     hidden: { opacity: 0, y: 50 }
-  };
+};
 
 const Hero = () => {
     const controls = useAnimation();
@@ -32,15 +33,15 @@ const Hero = () => {
             </motion.h1>
             <div className='flex items-center mt-16 gap-20'>
                 <h2 className={`text-4xl ${jura.className} text-white whitespace-nowrap`} style={{ fontSize: '30px' }}>Code Snippets</h2>
-                <div className='border border-purple-600 rounded-lg '>
-                    <Image
-                    className='rounded-lg'
-                        alt="Code Snippet Image"
-                        src='/hero_code.svg'
-                        width={300}
-                        height={300} 
-                    />
+
+                <div  className=' rounded-lg custom-class' ></div>
+                <div>
+                    
+                   
                 </div>
+
+
+
             </div>
             <InView as="div" onChange={(inView, entry) => inView && controls.start("visible")}>
                 <motion.div
@@ -61,11 +62,11 @@ const Hero = () => {
                 </motion.div>
             </InView>
             <div className='flex justify-center items-center'>
-            <div className='border rounded-lg w-fit'>
-                <p className={` ${jura.className} p-2 pl-8 pr-8`} >Get Started</p>
+                <div className='border rounded-lg w-fit'>
+                    <p className={` ${jura.className} p-2 pl-8 pr-8`} >Get Started</p>
+                </div>
             </div>
-            </div>
-                <p className={` text-xs ${jura.className} p-2 pl-6 pr-6`} >npm never-give-up</p>
+            <p className={` text-xs ${jura.className} p-2 pl-6 pr-6`} >npm never-give-up</p>
         </div>
     )
 }
