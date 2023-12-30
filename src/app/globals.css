@@ -39,18 +39,18 @@ body {
 .link::after {
   content: '';
   position: absolute;
-  width: 0; /* Initially no width */
-  height: 2px; /* Thickness of the underline */
-  background-color: #ffffff; /* Color of the underline */
+  width: 0; 
+  height: 2px; 
+  background-color: #ffffff; 
   bottom: 0;
   left: 0;
-  opacity: 0; /* Initially hidden */
+  opacity: 0; 
   transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .link:hover::after {
-  width: 100%; /* Full width on hover */
-  opacity: 1; /* Show the underline on hover */
+  width: 100%; 
+  opacity: 1; 
 }
 
 
@@ -71,13 +71,15 @@ width: 302px;
 .custom-class::before {
   content: "";
   background-image: conic-gradient(
-    #ffffff 20deg,
+    #ff80ff 5deg,
+    purple 40deg,
     transparent 120deg
-  );
+);
+
   width: 150%;
   height: 150%;
   position: absolute;
-  animation: rotate 4s linear infinite;
+  animation: rotate 6s linear infinite;
 }
 
 .custom-class::after {
