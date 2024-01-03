@@ -22,9 +22,9 @@ const imageVariants = {
 const Hero = () => {
     const controls = useAnimation();
     return (
-        <div className='text-center -translate-y-20'>
+        <div className=' text-center -translate-y-20 '>
             <motion.h1
-                className={`${pacifico.className} p-4`} style={{ opacity: 0.2, fontSize: '120px', overflow: 'hidden' }}
+                className={`${pacifico.className} p-4 `} style={{ opacity: 0.2, fontSize: '120px', overflow: 'hidden' }}
                 initial={{ width: '0' }} // Start with width 0
                 animate={{ width: '100%' }} // Animate to full width
                 transition={{ duration: 3.0, ease: "easeInOut" }} // Set the duration and easing function
@@ -32,7 +32,7 @@ const Hero = () => {
                 Snippify
             </motion.h1>
             <div className='flex items-center mt-16 gap-20'>
-                <h2 className={`text-4xl ${jura.className} text-white whitespace-nowrap`} style={{ fontSize: '30px' }}>Code Snippets</h2>
+                <h2 className={`text-4xl ${jura.className} text-white whitespace-nowrap`} style={{ fontSize: '30px' }}>Code Snippets</h2>  
 
                 <div  className=' rounded-lg custom-class' ></div>
                 <div>
