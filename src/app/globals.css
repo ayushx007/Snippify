@@ -26,6 +26,34 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.link {
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 2px; 
+  background-color: #ffffff; 
+  bottom: 0;
+  left: 0;
+  opacity: 0; 
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%; 
+  opacity: 1; 
+}
+
+
 
 .custom-class {
   height: 291px;
@@ -43,13 +71,15 @@ width: 302px;
 .custom-class::before {
   content: "";
   background-image: conic-gradient(
-    #ffffff 20deg,
+    #ff80ff 5deg,
+    purple 40deg,
     transparent 120deg
-  );
+);
+
   width: 150%;
   height: 150%;
   position: absolute;
-  animation: rotate 4s linear infinite;
+  animation: rotate 6s linear infinite;
 }
 
 .custom-class::after {

@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import { Pacifico, Jura } from 'next/font/google';
 import Image from 'next/image';
-import CodeBlock from './CodeBlock';
+//import CodeBlock from './CodeBlock';
 
 const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
 const jura = Jura({ weight: "400", subsets: ["latin"] });
@@ -35,12 +35,6 @@ const Hero = () => {
                 <h2 className={`text-4xl ${jura.className} text-white whitespace-nowrap`} style={{ fontSize: '30px' }}>Code Snippets</h2>  
 
                 <div  className=' rounded-lg custom-class' ></div>
-                <div>
-                    
-                   
-                </div>
-
-
 
             </div>
             <InView as="div" onChange={(inView, entry) => inView && controls.start("visible")}>
