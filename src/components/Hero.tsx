@@ -60,7 +60,7 @@ const Hero = () => {
                     <p className={` ${jura.className} p-2 pl-8 pr-8`} >Get Started</p>
                 </div>
             </div>
-            <p className={` text-xs ${jura.className} p-2 pl-6 pr-6`} >npm never-give-up</p>
+            <p className={` text-xs ${jura.className} p-2 pl-6 pr-6`} >npm neverr-give-up</p>
         </div>
     )
 }
