@@ -18,6 +18,7 @@ const imageVariants = {
     }),
     hidden: { opacity: 0, y: 50 }
 };
+//comment
 
 const Hero = () => {
     const controls = useAnimation();
